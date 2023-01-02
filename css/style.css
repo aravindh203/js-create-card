@@ -1,0 +1,124 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+  width:90%;
+  margin: auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.col{
+  width: 25%;
+  padding: 10px;
+}
+.card{
+  padding: 20px;
+}
+.card img{
+  width: 100%;
+}
+.details{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+.card  p{
+  font-size: 12px;
+  color: gray;
+  padding: 5px 0px;
+}
+.card h4{
+  padding-top: 10px;
+}
+.rating{
+  color: white;
+  /*background-color: #48c479;*/
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+}
+.rating i{
+  font-size: 10px;
+  padding: 2px 5px 5px 0px;
+}
+.rating span{
+  font-size: 12px;
+}
+.offr{
+  padding: 15px 0px;
+  border-top: 1px solid #e9e9eb;
+  display: flex;
+  align-items: center;
+  gap: 3%;
+}
+.offr img{
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+.offr span{
+  font-size: 13px;
+  color: #8a584b;
+}
+.offr i{
+  font-size: 15px;
+  padding-right: 10px;
+}
+.time{
+  padding: 0px 15px;
+  position: relative;
+}
+.time p::before{
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: 35%;
+}
+.time p::after{
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 35%;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+.add{
+  opacity: 0;
+  padding: 5px 10px;
+  box-shadow: 0px 0px 3px grey;
+}
+.col:hover .add{
+  opacity: 1;
+}
+.col:hover .card{
+  box-shadow: 0px 0px 3px grey;
+}
+.col:hover .button{
+  border-top: 1px solid #e9e9eb;
+}
+.add input{
+  width: 30px;
+  border: none;
+  background-color: white;
+  padding-left: 10px;
+}
+.add button{
+  border: none;
+  background-color: white;
+}
