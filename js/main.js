@@ -115,6 +115,8 @@ let row=document.createElement("div");
 row.classList.add("row");
 container.appendChild(row);
 
+let position=document.querySelector(".position");
+
 food.forEach(values => {
 
   let col=document.createElement("div");
@@ -206,9 +208,17 @@ food.forEach(values => {
   minus.innerText="-";
   add.appendChild(minus);
 
+  let click=document.createElement("p");
+
   minus.addEventListener("click",function() {
     if(quantity.value>0){
       --quantity.value
+    }
+    if(quantity.value==0){
+      click.remove();
+    }
+    else{
+      click.innerText=`${heading.innerText} (${quantity.value})`;
     }
   })
 
@@ -217,16 +227,20 @@ food.forEach(values => {
   add.appendChild(quantity);
 
   let plus=document.createElement("button");
-  plus.innerText="+"
+  plus.innerText="+";
   add.appendChild(plus);
 
   plus.addEventListener("click",function() {
-    ++quantity.value
+    ++quantity.value;
+    click.innerText=`${heading.innerText} (${quantity.value})`;
+    click.style.padding="10px 0px"
+    position.appendChild(click);
+    position.style.display="flex";
   })
+})
 
-  })
 
-
+  
 
 
 

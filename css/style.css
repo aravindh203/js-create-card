@@ -122,3 +122,18 @@
   border: none;
   background-color: white;
 }
+.position{
+  position: fixed;
+  width: 300px;
+  top:20px;
+  right: 20px;
+  background-color:white ;
+  box-shadow: 0px 0px 5px grey;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+  flex-wrap: wrap;
+}
+.click{
+  width: 100%;
+}
